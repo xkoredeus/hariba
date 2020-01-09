@@ -14,6 +14,7 @@ var gulp = require('gulp'),
     minify = require('gulp-minify'),
     cssnano = require('gulp-cssnano'),
     autoprefixer = require('gulp-autoprefixer');
+    concat = require('gulp-concat');
 
 
 // ------------ Development Tasks -------------
@@ -40,14 +41,12 @@ gulp.task('compile-html', function () {
         .pipe(panini({
             root: 'src/pages/',
             layouts: 'src/layouts/',
-            partials: 'src/partials/',
-            helpers: 'src/helpers/',
-            data: 'src/data/'
+            partials: 'src/components/',
         }))
         .pipe(gulp.dest('dist'));
 });
 
-// Reset Panini's cache of layouts and partials
+// Reset Panini's cache of layouts and components
 gulp.task('resetPages', (done) => {
     panini.refresh();
     done();
@@ -64,7 +63,6 @@ gulp.task('watch', ['sass'], function () {
     gulp.watch(['src/assets/js/**/*.js'], ['scripts', browserSync.reload]);
     gulp.watch(['src/assets/scss/**/*'], ['sass', browserSync.reload]);
     gulp.watch(['src/assets/img/**/*'], ['images']);
-    gulp.watch(['src/assets/video/**/*'], ['media']);
     gulp.watch(['src/**/*.html'], ['resetPages', 'compile-html', browserSync.reload]);
     console.log('Watching for changes');
 });
@@ -73,7 +71,7 @@ gulp.task('watch', ['sass'], function () {
 // ------------ Optimization Tasks -------------
 // Copies image files to dist
 gulp.task('images', function () {
-    return gulp.src('src/assets/img/**/*.+(png|jpg|jpeg|gif|svg)')
+    return gulp.src('src/assets/img/**/*.+(png|jpg|jpeg|gif|svg|ico)')
         .pipe(cache(imagemin ([
             imagemin.gifsicle({interlaced: true}),
             imagemin.jpegtran({progressive: true}),
@@ -82,25 +80,24 @@ gulp.task('images', function () {
         .pipe(gulp.dest('dist/assets/img/'));
 });
 
-// Copies video assets to dist
-gulp.task('media', function () {
-    return gulp.src('src/assets/video/**/*')
-        .pipe(gulp.dest('dist/assets/video/'));
-});
-
 // Places font files in the dist folder
 gulp.task('font', function () {
-    return gulp.src('src/assets/fonts/**/*.+(eot|woff|ttf|otf)')
+    return gulp.src('src/assets/fonts/*.+(eot|woff|woff2|ttf|otf)')
         .pipe(gulp.dest("dist/assets/fonts"))
         .pipe(browserSync.stream());
 });
 
 // Concatenating js files
 gulp.task('scripts', function () {
-    return gulp.src('src/assets/js/app.js')
+    return gulp.src([
+        'src/assets/js/vendor/jquery/jquery.min.js',
+        'src/assets/js/vendor/fancybox/jquery.fancybox.min.js',
+        'src/assets/js/vendor/owl.carousel/owl.carousel.min.js',
+        'src/assets/js/app.js'
+    ])
         .pipe(sourcemaps.init())
         //If concatenating more than one JS file
-        //.pipe(concat('app.js'))
+        .pipe(concat('app.js'))
         .pipe(sourcemaps.write('./'))
         .pipe(minify())
         .pipe(gulp.dest('dist/assets/js/'))
@@ -116,7 +113,7 @@ gulp.task('clean:dist', function () {
 
 // ------------ Build Sequence -------------
 // Simply run 'gulp' in terminal to run local server and watch for changes
-gulp.task('default', ['clean:dist', 'font', 'scripts', 'images', 'compile-html', 'resetPages', 'media', 'watch']);
+gulp.task('default', ['clean:dist', 'font', 'scripts', 'images', 'compile-html', 'resetPages', 'watch']);
 
 // Creates production ready assets in dist folder
 gulp.task('build', function () {

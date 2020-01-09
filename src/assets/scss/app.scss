@@ -1,11 +1,4 @@
-//Bootstrap styles 
-@import "node_modules/bootstrap/scss/bootstrap";
-
-//Custom mixins
-@import "mixins/mixins";
-
-//Custom settings --
-@import "settings";
-
-//Component specific styles 
-@import "components/callout";
+@import "includes/fancybox/jquery.fancybox.min";
+@import "includes/owl-carousel/owl.carousel.min";
+@import "includes/bs-grid/grid";
+@import "includes/base";

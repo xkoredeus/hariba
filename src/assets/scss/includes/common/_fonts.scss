@@ -1,0 +1,14 @@
+$g-reg: 'GothamPro';
+$g-black: 'GothamPro-Black';
+$g-bold: 'GothamPro-Bold';
+$g-med: 'GothamPro-Medium';
+
+.bold {
+  font-family: $g-bold, Roboto, sans-serif !important;
+}
+.med {
+  font-family: $g-med !important;
+}
+.reg {
+  font-family: $g-reg !important;
+}
