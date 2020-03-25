@@ -13,7 +13,7 @@
 
 html, body {
   position: relative;
-  font-family: $g-reg, Roboto, sans-serif;
+  font-family: $h-reg, Roboto, sans-serif;
   font-size: 14px;
   line-height: 1.4;
   color: $dark;
@@ -25,4 +25,9 @@ html, body {
     overflow: hidden;
     padding-right: 15px;
   }
+}
+
+.svg-sprite {
+  position: absolute;
+  bottom: 0;
 }

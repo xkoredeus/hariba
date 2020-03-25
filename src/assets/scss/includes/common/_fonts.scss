@@ -1,14 +1,18 @@
-$g-reg: 'GothamPro';
-$g-black: 'GothamPro-Black';
-$g-bold: 'GothamPro-Bold';
-$g-med: 'GothamPro-Medium';
+$h-black: 'HelveticaNeueCyr-Black';
+$h-bold: 'HelveticaNeueCyr-Bold';
+$h-hev: 'HelveticaNeueCyr-Heavy';
+$h-med: 'HelveticaNeueCyr-Medium';
+$h-reg: 'HelveticaNeueCyr-Roman';
+$h-lig: 'HelveticaNeueCyr-Light';
+$h-thin: 'HelveticaNeueCyr-Thin';
 
-.bold {
-  font-family: $g-bold, Roboto, sans-serif !important;
+$f-reg: 'Formular-Regular';
+$f-bold: 'Formular-Bold';
+
+.h-bold {
+  font-family: $h-bold;
 }
-.med {
-  font-family: $g-med !important;
-}
-.reg {
-  font-family: $g-reg !important;
+
+.f-bold {
+  font-family: $f-bold;
 }
