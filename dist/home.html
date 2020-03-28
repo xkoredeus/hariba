@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#6232ad">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <title>New Project</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+    <!-- preloader-->
+    <style>
+        .preloader{
+            display: block;
+            position: relative;
+            width: 125px;
+            height: 125px;
+            border-radius: 50%;
+            border: 4px solid transparent;
+            border-top: 4px solid #92939F;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+        }
+        .preloader__wrp {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 999;
+            background-color: #fff;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+    
+        .preloader::before,
+        .preloader::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            border: 4px solid transparent;
+        }
+        .preloader::before {
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border-top-color: #478CD0;
+            -webkit-animation: spin 3s linear infinite;
+            animation: spin 3.5s linear infinite;
+        }
+        .preloader::after {
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border-top-color: #EBEBEB;
+            -webkit-animation: spin 1.5s linear infinite;
+            animation: spin 1.75s linear infinite;
+        }
+        -webkit-@keyframes spin {
+            -webkit-from {
+                -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            -webkit-to {
+                -webkit-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    
+        @-webkit-keyframes spin {
+            from {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    
+        @keyframes spin {
+            from {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <div class="preloader__wrp">
+        <div class="preloader"></div>
+    </div>
+    <!-- /preloader-->    <section class="hero">
+        <header class="header">
+            <div class="container">
+                <div class="header__in d-flex align-items-center justify-content-between flex-wrap flex-xl-nowrap">
+                    <a class="header__logo order-1" href="home.html">
+                        <svg class="header__logo-icon" width="220" height="35">
+                            <use xlink:href="#logo"></use>
+                        </svg>
+                    </a>
+                    <div class="header__center flex-grow-1 d-flex flex-column flex-xl-row justify-content-between align-items-center order-3 order-xl-2">
+                        <nav class="header__nav d-flex flex-column flex-xl-row align-items-center ml-xl-5 order-2 order-xl-1">
+                            <a class="header__nav-link js-link--anchor" href="#about">О компании</a>
+                            <a class="header__nav-link js-link--anchor" href="#dir">Услуги</a>
+                            <a class="header__nav-link" href="news.html">Новости</a>
+                            <a class="header__nav-link js-link--anchor" href="#feed">Контакты</a>
+                        </nav>
+                        <a class="header__tel mr-xl-5 mb-5 mb-xl-0 order-1 order-xl-2" href="tel:84950000000">8 (495) 000-00-00</a>
+                    </div>
+                    <button class="header__menu-btn js-header__menu-btn order-2 order-xl-3">
+                        <svg class="header__menu-hamb" width="36" height="32">
+                            <use xlink:href="#hamburger"></use>
+                        </svg>
+                        <svg class="header__menu-cross" width="27" height="27">
+                            <use xlink:href="#cross">
+                            </use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>        <section class="banner">
+            <div class="container">
+                <div class="banner__offer section--inner">
+                    <div class="banner__title section__title">Тестовый заголовок</div>
+                    <div class="banner__descr">Тестовый подзаголовок в одну или в две строки, а может быть в три строки. </div>
+                    <a class="button banner__button js-link--anchor" href="#about">
+                        <span class="button__icon">
+                            <svg width="10" height="18">
+                                <use xlink:href="#arrow--right"></use>
+                            </svg>
+                        </span>
+                        <span class="button__text">Подробнее о Horiba</span>
+                    </a>
+                </div>
+            </div>
+        </section>    </section>
+    <main class="layout">
+        <div class="layout__overlay js-layout__overlay"></div>
+        <div class="layout__grid">
+            <div class="layout__grid-item">
+                <div class="layout__grid-item-in"></div>
+            </div>
+            <div class="layout__grid-item">
+                <div class="layout__grid-item-in"></div>
+            </div>
+            <div class="layout__grid-item">
+                <div class="layout__grid-item-in"></div>
+            </div>
+            <div class="layout__grid-item">
+                <div class="layout__grid-item-in"></div>
+            </div>
+            <div class="layout__grid-item">
+                <div class="layout__grid-item-in"></div>
+            </div>
+            <div class="layout__grid-item">
+                <div class="layout__grid-item-in"></div>
+            </div>
+            <div class="layout__grid-item">
+                <div class="layout__grid-item-in"></div>
+            </div>
+        </div>        <div class="layout__content">
+            <section class="about section--inner" id="about">
+                <div class="section__in">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-6 order-2 order-xl-1">
+                                <div class="about__video" style="background-image: url(assets/img/about__img.jpg);">
+                                    <button class="about__video-button" type="button">
+                                        <svg width="22" height="28">
+                                            <use xlink:href="#play"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="offset-xl-1 order-xl-2"></div>
+                            <div class="col-xl-5 order-1 order-xl-3 mb-4 mb-xl-0">
+                                <div class="section__title">О компании</div>
+                                <div class="about__descr"><span>ООО “ХОРИБА”</span> по всему миру предоставляет широкий спектр инструментов и систем для различных областей применения: от исследований и разработок в автомобильной промышленности, мониторинга процессов и окружающей среды, медицинской диагностики in-vitro, производства полупроводников и метрологии до широкого спектра научных исследований и исследований и контроля качества. Проверенное качество и надежная работа завоевали широкое доверие к бренду HORIBA.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section><section class="dir section--inner" id="dir">
+                <div class="dir__in section__in">
+                    <img class="dir__decor" src="assets/img/dir__decor.png" alt="Dir decor">
+                    <div class="container">
+                        <div class="dir__title section__title">Направления деятельности</div>
+                        <div class="dir__slider owl-carousel">
+                            <div class="dir__item">
+                                <div class="section__subtitle"><span class="mr-3 mr-xl-4">01</span>Scientific</div>
+                                <div class="row align-items-center">
+                                    <div class="col-xl-8 order-2 order-xl-1">
+                                        <div class="dir__descr">HORIBA Scientific предлагает 200-летний опыт разработки высокопроизводительных научных инструментов и аналитических решений для наук о жизни, энергии и многих других приложений. Наши технологии включают в себя:</div>
+                                        <div class="dir__list">
+                                            <div class="dir__list-col">
+                                                <div class="dir__list-item">Рамановская спектроскопия</div>
+                                                <div class="dir__list-item">АСМ и АСМ-Раман</div>
+                                                <div class="dir__list-item">Флуоресцентная спектроскопия</div>
+                                                <div class="dir__list-item">Рентгеновская флуоресцентная спектроскопия</div>
+                                                <div class="dir__list-item">Характеристика частиц</div>
+                                                <div class="dir__list-item">Сера-в-масле</div>
+                                                <div class="dir__list-item">Элементный анализ</div>
+                                                <div class="dir__list-item">ICP-OES</div>
+                                            </div>
+                                            <div class="dir__list-col">
+                                                <div class="dir__list-item">Индивидуальные решения для спектроскопии</div>
+                                                <div class="dir__list-item">Спектрометры и камеры для OEM</div>
+                                                <div class="dir__list-item">Поверхностная плазмонно-резонансная томография</div>
+                                                <div class="dir__list-item">Спектроскопическая Эллипсометрия</div>
+                                                <div class="dir__list-item">Криминалистика</div>
+                                                <div class="dir__list-item">Оптическая эмиссионная спектрометри с тлеющим разрядом (GDOES)</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 order-1 order-xl-2">
+                                        <div class="dir__image-wrapper">
+                                            <img class="dir__image" src="assets/img/dir__img_1.png" alt="Directions Image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dir__item">
+                                <div class="section__subtitle"><span class="mr-3 mr-xl-4">02</span>Process and
+                                    Environmental</div>
+                                <div class="row align-items-center">
+                                    <div class="col-xl-8 order-2 order-xl-1">
+                                        <div class="dir__descr">HORIBA предлагает широкий спектр технологий для измерения качества воздуха, воды и почвы. Благодаря своим измерительным технологиям, которые соответствуют экологическим нормам по всему миру и способствуют развитию охраны окружающей среды.</div>
+                                    </div>
+                                    <div class="col-xl-4 order-1 order-xl-2">
+                                        <div class="dir__image-wrapper">
+                                            <img class="dir__image" src="assets/img/dir__img_2.png" alt="Directions Image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dir__item">
+                                <div class="section__subtitle"><span class="mr-3 mr-xl-4">03</span>Automotive Test Systems</div>
+                                <div class="row align-items-center">
+                                    <div class="col-xl-8 order-2 order-xl-1">
+                                        <p class="dir__text">HORIBA Automotive Test Systems является ведущим поставщиком в области систем тестирования двигателей, систем испытаний трансмиссии, систем тестирования тормозов, балансов аэродинамической трубы и систем тестирования выбросов. HORIBA ATS - это больше, чем просто ведущий в мире поставщик систем для испытаний на выбросы. Он может предложить своим клиентам комплексные решения с полным набором возможностей «под ключ».</p>
+                                        <p class="dir__text">Мы не только можем предоставить вам инструменты для тестирования на вашем собственном предприятии, но также можем провести тестирование для вас в рамках наших услуг HORIBA по контрактному тестированию. От простого тестирования двигателя до сложных динамических исследований и разработок двигателей и трансмиссий - HORIBA - ваш полный партнер по тестированию.</p>
+                                    </div>
+                                    <div class="col-xl-4 order-1 order-xl-2">
+                                        <div class="dir__image-wrapper">
+                                            <img class="dir__image" src="assets/img/dir__img_3.png" alt="Directions Image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dir__navigation row align-items-baseline">
+                            <div class="col-xl-4">
+                                <button class="button dir__button" type="button">
+                                    <span class="button__icon">
+                                        <svg width="23" height="25">
+                                            <use xlink:href="#string-arrow--right"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="button__text">Оставить заявку</span>
+                                </button>
+                            </div>
+                            <div class="col-xl-3">
+                                <div class="dir__switch d-none d-xl-block">
+                                    <button class="button dir__switch-button js-dir__switch--prev mr-3" type="button">
+                                        <span class="button__icon">
+                                            <svg width="10" height="18">
+                                                <use xlink:href="#arrow--left"></use>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <button class="button dir__switch-button js-dir__switch--next" type="button">
+                                        <span class="button__icon">
+                                            <svg width="10" height="18">
+                                                <use xlink:href="#arrow--right"></use>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-xl-2">
+                                <a class="link--decor" href="#">
+                                    <span>Подробнее</span>
+                                    <svg width="5" height="9">
+                                        <use xlink:href="#arrow--right"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section><section class="feed section--inner" id="feed">
+                <div class="section__in">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-5">
+                                <div class="feed__image-wrapper">
+                                    <img class="feed__image" src="assets/img/feed__img.png" alt="Feed image">
+                                </div>
+                            </div>
+                            <div class="col-xl-7">
+                                <div class="feed__title section__subtitle">
+                                    <span>Для получения дополнительной информации</span> <br>заполните поля ниже
+                                </div>
+                                <form class="feed-form row">
+                                    <div class="col-sm-6 mb-2 mb-sm-3">
+                                        <input class="feed__input w-100" type="text" placeholder="Ваше имя">
+                                    </div>
+                                    <div class="col-sm-6 mb-2 mb-sm-3">
+                                        <input class="feed__input w-100" type="tel" placeholder="Ваш номер">
+                                    </div>
+                                    <div class="col-sm-6 mb-2 mb-sm-3">
+                                        <input class="feed__input w-100" type="email" placeholder="Ваша почта">
+                                    </div>
+                                    <div class="col-sm-6 mb-2 mb-sm-3">
+                                        <select class="feed__select js-select w-100">
+                                            <option value disabled selected hidden>Бизнес-сегмент</option>
+                                            <option value="1">Scientific</option>
+                                            <option value="2">Process and Environmental</option>
+                                            <option value="3">Automotive Test Systems</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 mb-3 mb-sm-4">
+                                        <textarea class="feed__textarea w-100" rows="4" placeholder="Ваш комментарий"></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="button feed__button" type="submit">
+                                            <span class="button__icon">
+                                                <svg width="10" height="18">
+                                                    <use xlink:href="#arrow--right"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="button__text">Связаться со мной</span>
+                                        </button>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form__pol">
+                                            <label class="form__checkbox">
+                                                <input class="form__checkbox-input" type="checkbox" required="">
+                                                <span class="form__checkbox-gal">
+                                                    <span class="form__checkbox-gal-square"></span>
+                                                    <svg width="15" height="13">
+                                                        <use xlink:href="#checkbox__gal"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="form__checkbox-text"><span>Нажимая кнопку «Связаться со мной», вы даете</span> <a class="form__checkbox-link" href="#">Согласие на обработку персональных данных</a> <span>на условиях и для целей, определенных</span> <a class="form__checkbox-link" href="#">Политикой конфиденциальности</a></span>
+                                            </label>
+                                        </div>                        </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section><section class="news section--inner">
+                <div class="section__in">
+                    <div class="container">
+                        <div class="section__title">Новости</div>
+                        <div class="row">
+                            <div class="col-xl-6 d-none d-xl-block">
+                                <div class="news__item--wide h-100" style="background-image: url(assets/img/news__img_1.jpg);">
+                                    <div class="news__item--wide-in">
+                                        <div class="news__item--wide-date">01/24/2020</div>
+                                        <div class="news__item--wide-title">A close partnership between HORIBA Medical and Montpellier University Hospital</div>
+                                        <div class="news__item--wide-descr">Two parties have signed a contract to meet the company’s requirements of biological samples for the validation and development of IVD solutions and analyzers.</div>
+                                        <a class="button button--white" href="#">
+                                            <span class="button__icon">
+                                                <svg width="10" height="18">
+                                                    <use xlink:href="#arrow--right"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="button__text">Читать далее</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="d-flex flex-column mb-4 mb-xl-5">
+                                    <div class="news__item">
+                                        <div class="news__item-image" style="background-image: url(assets/img/news__img_4.jpg);"></div>
+                                        <div class="news__item-info">
+                                            <div class="news__item-date">01/24/2020</div>
+                                            <a class="news__item-title" href="news-page.html">Masao Horiba Awards 2020 now accepting applications!</a>
+                                            <div class="news__item-descr">This year’s theme is ‘Optical/Spectroscopic Measurement Technologies for Life Science’</div>
+                                        </div>
+                                    </div>                        <div class="news__item">
+                                        <div class="news__item-image" style="background-image: url(assets/img/news__img_4.jpg);"></div>
+                                        <div class="news__item-info">
+                                            <div class="news__item-date">01/24/2020</div>
+                                            <a class="news__item-title" href="news-page.html">Masao Horiba Awards 2020 now accepting applications!</a>
+                                            <div class="news__item-descr">This year’s theme is ‘Optical/Spectroscopic Measurement Technologies for Life Science’</div>
+                                        </div>
+                                    </div>                        <div class="news__item">
+                                        <div class="news__item-image" style="background-image: url(assets/img/news__img_4.jpg);"></div>
+                                        <div class="news__item-info">
+                                            <div class="news__item-date">01/24/2020</div>
+                                            <a class="news__item-title" href="news-page.html">Masao Horiba Awards 2020 now accepting applications!</a>
+                                            <div class="news__item-descr">This year’s theme is ‘Optical/Spectroscopic Measurement Technologies for Life Science’</div>
+                                        </div>
+                                    </div>                    </div>
+                                <a class="button news__button" href="#">
+                                    <span class="button__icon">
+                                        <svg width="10" height="18">
+                                            <use xlink:href="#arrow--right"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="button__text">Все новости</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-12 mb-3 mb-xl-0 order-3 order-xl-1">
+                    <div class="d-flex flex-column justify-content-between align-items-start h-100">
+                        <a class="footer__logo mb-3" href="#">
+                            <svg width="200" height="32">
+                                <use xlink:href="#logo"></use>
+                            </svg>
+                        </a>
+                        <a class="footer__link mb-4" href="#">Политика конфиденциальности</a>
+                        <span class="mt-auto">2017-2020 © ООО «ХОРИБА», разработка решений для исследований</span>
+                        <div class="d-flex d-xl-none mt-4 align-items-end">
+                            <span class="mr-3 mr-xl-5">Создание сайта Студия</span>
+                            <a class="footer__akticom" href="https://akticom.ru/" target="_blank">
+                                <svg width="109" height="41">
+                                    <use xlink:href="#akticom"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-sm-6 order-1 order-xl-2 mb-3 mb-xl-0">
+                    <div class="d-flex flex-column justify-content-between align-items-start h-100">
+                        <div class="footer__title">Подписка на рассылку</div>
+                        <form class="footer__form w-100 mb-4">
+                            <input class="w-100" type="email" placeholder="Ваша почта">
+                            <button class="button footer__form-button" type="button">
+                                <span class="button__icon">
+                                    <svg width="18" height="15">
+                                        <use xlink:href="#mail"></use>
+                                    </svg>
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-sm-6 order-2 order-xl-3 mb-4 mb-xl-0">
+                    <div class="d-flex flex-column justify-content-between align-items-start">
+                        <div class="mb-2 order-2 order-xl-1"><span class="h-bold">Адрес:</span> г. Москва, Тверская улица, дом 13</div>
+                        <div class="mb-2 order-3 order-xl-2 mb-xl-3"><span class="h-bold">Почта:</span> <a class="footer__link" href="mailto:infi@horiba.ru">infi@horiba.ru</a></div>
+                        <a class="footer__title footer__tel mb-3 order-1 order-xl-3" href="tel:84950000000">8 (495) 000-000</a>
+                        <div class="d-none d-xl-flex align-items-end order-xl-4">
+                            <span class="mr-3 mr-xl-5">Создание сайта Студия</span>
+                            <a class="footer__akticom" href="https://akticom.ru/" target="_blank">
+                                <svg width="109" height="41">
+                                    <use xlink:href="#akticom"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>    <svg width="0" height="0" class="svg-sprite">
+        <symbol viewBox="0 0 220 35" xmlns="http://www.w3.org/2000/svg" id="logo">
+            <path d="M26.8339 33.4045V22.2966C26.8389 22.1654 26.8157 22.0346 26.7659 21.9131C26.7161 21.7915 26.6409 21.6821 26.5452 21.5922C26.4496 21.5022 26.3358 21.4338 26.2115 21.3916C26.0873 21.3494 25.9554 21.3343 25.8248 21.3474H12.3826C12.1407 21.3604 11.9133 21.4664 11.7478 21.6433C11.5823 21.8202 11.4915 22.0543 11.4945 22.2966V33.4045H0V1.6157H11.4945V13.5718C11.4863 13.6965 11.5028 13.8217 11.543 13.94C11.5832 14.0583 11.6464 14.1675 11.7289 14.2613C11.8114 14.3551 11.9117 14.4317 12.0238 14.4867C12.136 14.5417 12.2579 14.5739 12.3826 14.5816H25.855C25.9907 14.5941 26.1274 14.5765 26.2555 14.5301C26.3835 14.4838 26.4998 14.4098 26.5961 14.3134C26.6925 14.217 26.7664 14.1007 26.8127 13.9725C26.859 13.8443 26.8766 13.7076 26.8642 13.5718V1.6157H38.2477V33.4045H26.8339Z"/>
+            <path d="M139.367 1.6157H127.883V33.4045H139.367V1.6157Z"/>
+            <path d="M62.3468 29.9005C56.5945 29.9005 54.5862 22.9732 54.7174 17.3283C54.8385 11.9561 56.7358 5.63474 62.2358 5.55395C67.7358 5.47317 69.9055 11.7643 70.1174 17.2576C70.3193 23.0035 68.1697 29.9308 62.3468 29.9005ZM62.3468 0C50.8523 0 41.5073 6.897 41.5073 17.3283C41.5073 27.9414 49.5807 35 62.7807 35C74.467 35 83.7817 27.9313 83.6505 17.3586C83.4486 6.15984 74.1743 0 62.3468 0Z"/>
+            <path d="M106.609 15.8742H101.563C100.415 15.8913 99.3056 15.4619 98.4679 14.6764C97.6302 13.8909 97.1299 12.8106 97.0725 11.6633C97.1298 10.5141 97.6294 9.43176 98.4665 8.643C99.3037 7.85424 100.413 7.42033 101.563 7.4322H106.609C107.737 7.43715 108.818 7.88201 109.622 8.67216C110.427 9.46232 110.892 10.5354 110.918 11.6633C110.892 12.7893 110.426 13.8603 109.621 14.6472C108.816 15.4341 107.735 15.8745 106.609 15.8742ZM117.428 21.3474C117.301 21.111 117.232 20.8481 117.226 20.5799C117.226 20.2265 117.589 20.075 117.67 19.863C120.465 17.399 122.453 14.9149 122.453 11.4512C122.385 8.81882 121.291 6.31728 119.406 4.47994C117.521 2.64259 114.993 1.6148 112.361 1.6157H86.5468V33.4045H97.9505V25.0736C98.0048 24.2252 98.353 23.4223 98.935 22.8031C99.517 22.1838 100.297 21.7869 101.139 21.6806C101.961 21.5551 102.802 21.6584 103.569 21.979C104.336 22.2996 105 22.8252 105.489 23.4983L112.361 33.4247H126.066L117.428 21.3474Z"/>
+            <path d="M158.309 27.8203C157.178 27.8247 156.087 27.3947 155.263 26.6188C154.439 25.8429 153.943 24.7802 153.879 23.6497C153.913 22.496 154.394 21.4008 155.221 20.596C156.048 19.7912 157.156 19.34 158.309 19.3379H164.072C165.232 19.3269 166.35 19.7729 167.184 20.5796C168.019 21.3863 168.503 22.489 168.532 23.6497C168.508 24.7747 168.041 25.8445 167.232 26.6258C166.422 27.4071 165.337 27.8365 164.213 27.8203H158.309ZM157.865 7.15955H163.204C163.734 7.14612 164.261 7.23735 164.756 7.42803C165.251 7.61871 165.704 7.9051 166.088 8.27083C166.472 8.63656 166.781 9.07447 166.996 9.55954C167.211 10.0446 167.328 10.5673 167.341 11.0978C167.315 12.162 166.87 13.1728 166.102 13.9103C165.335 14.6478 164.308 15.0524 163.244 15.0361H157.865C156.812 15.0364 155.8 14.6247 155.046 13.8889C154.292 13.1531 153.855 12.1515 153.828 11.0978C153.855 10.0441 154.292 9.04249 155.046 8.30669C155.8 7.57089 156.812 7.15922 157.865 7.15955ZM175.879 17.2576C175.781 17.1618 175.704 17.0469 175.652 16.9202C175.6 16.7935 175.574 16.6575 175.576 16.5205C175.576 16.1671 175.96 15.9752 176.252 15.753C177.104 15.0258 177.775 14.1092 178.209 13.0764C178.644 12.0436 178.831 10.9233 178.755 9.80525C178.734 7.55104 177.82 5.39733 176.213 3.8166C174.607 2.23587 172.44 1.3572 170.187 1.37334H143.767V33.4045H170.783C171.965 33.4165 173.138 33.195 174.235 32.7526C175.332 32.3102 176.331 31.6557 177.175 30.8265C178.018 29.9973 178.69 29.0097 179.152 27.9203C179.614 26.8309 179.856 25.6611 179.865 24.4778C179.905 23.0302 179.558 21.5983 178.861 20.3292C178.164 19.0602 177.142 18 175.899 17.2576"/>
+            <path d="M203.853 22.4279C203.853 22.5087 203.48 22.65 203.48 22.65H196.547C196.461 22.6618 196.374 22.6523 196.293 22.6224C196.212 22.5924 196.14 22.543 196.083 22.4784C196.046 22.3395 196.022 22.1975 196.012 22.0542L199.453 12.3197C199.453 12.3197 199.726 11.8653 199.938 11.8653C200.15 11.8653 200.513 12.3197 200.513 12.3197L203.974 22.0138C203.943 22.1544 203.903 22.2927 203.853 22.4279ZM208.506 1.37334H191.501L180.006 33.4045H191.955L193.883 28.103C193.939 27.9061 194.032 27.7213 194.155 27.5577C194.361 27.4005 194.599 27.2902 194.851 27.2346H204.943C205.224 27.2724 205.499 27.3471 205.761 27.4567C205.961 27.6667 206.119 27.9136 206.225 28.1838L208.082 33.4348H220L208.506 1.37334Z"/>
+        </symbol>
+        <symbol viewBox="0 0 36 32" xmlns="http://www.w3.org/2000/svg" id="hamburger">
+            <path d="M0 2.52632C0 1.13107 1.13107 0 2.52632 0H33.4737C34.8689 0 36 1.13107 36 2.52632C36 3.92156 34.8689 5.05263 33.4737 5.05263H2.52632C1.13107 5.05263 0 3.92156 0 2.52632Z"/>
+            <path d="M0 16C0 14.6048 1.13107 13.4737 2.52632 13.4737H33.4737C34.8689 13.4737 36 14.6048 36 16C36 17.3952 34.8689 18.5263 33.4737 18.5263H2.52632C1.13107 18.5263 0 17.3952 0 16Z"/>
+            <path d="M0 29.4737C0 28.0784 1.13107 26.9474 2.52632 26.9474H33.4737C34.8689 26.9474 36 28.0784 36 29.4737C36 30.8689 34.8689 32 33.4737 32H2.52632C1.13107 32 0 30.8689 0 29.4737Z"/>
+        </symbol>
+        <symbol viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" id="cross">
+            <path d="M0.739945 0.739941C1.72653 -0.246646 3.32611 -0.246647 4.31269 0.73994L26.1958 22.623C27.1824 23.6096 27.1824 25.2092 26.1958 26.1958C25.2092 27.1824 23.6096 27.1824 22.623 26.1958L0.739944 4.31269C-0.246643 3.3261 -0.246643 1.72653 0.739945 0.739941Z"/>
+            <path d="M0.739941 26.196C-0.246646 25.2094 -0.246647 23.6098 0.73994 22.6232L22.623 0.740149C23.6096 -0.246438 25.2092 -0.246437 26.1958 0.74015C27.1824 1.72674 27.1824 3.32631 26.1958 4.3129L4.31269 26.196C3.3261 27.1826 1.72653 27.1826 0.739941 26.196Z"/>
+        </symbol>
+        <symbol viewBox="0 0 10 18" xmlns="http://www.w3.org/2000/svg" id="arrow--left">
+            <path d="M8.58325 1L0.999918 8.58333L8.58325 16.1667" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol viewBox="0 0 10 18" xmlns="http://www.w3.org/2000/svg" id="arrow--right">
+            <path d="M1 1L8.58333 8.58333L1 16.1667" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol viewBox="0 0 25 18" xmlns="http://www.w3.org/2000/svg" id="string-arrow--right">
+            <path d="M16 1L23.5833 8.58333M23.5833 8.58333L16 16.1667M23.5833 8.58333H1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol viewBox="0 0 22 28" xmlns="http://www.w3.org/2000/svg" id="play">
+            <path d="M0 26.4606V1.48383C0 0.413254 1.17939 -0.237827 2.08532 0.332628L21.2342 12.3904C22.0658 12.9141 22.0849 14.1197 21.2702 14.6694L2.12128 27.5884C1.21772 28.198 0 27.5506 0 26.4606Z"/>
+        </symbol>
+        <symbol viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg" id="checkbox__gal">
+            <path d="M1 7.34766L6 11.3477L14 1.34766" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol viewBox="0 0 22 19" xmlns="http://www.w3.org/2000/svg" id="mail">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.00008 2.01953C2.45237 2.01953 2.00008 2.47182 2.00008 3.01953V15.0195C2.00008 15.5672 2.45237 16.0195 3.00008 16.0195H19.0001C19.5478 16.0195 20.0001 15.5672 20.0001 15.0195V3.01953C20.0001 2.47182 19.5478 2.01953 19.0001 2.01953H3.00008ZM8.18163e-05 3.01953C8.18163e-05 1.36725 1.3478 0.0195312 3.00008 0.0195312H19.0001C20.6524 0.0195312 22.0001 1.36725 22.0001 3.01953V15.0195C22.0001 16.6718 20.6524 18.0195 19.0001 18.0195H3.00008C1.3478 18.0195 8.18163e-05 16.6718 8.18163e-05 15.0195V3.01953Z"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.180853 2.44604C0.497567 1.9936 1.1211 1.8836 1.57355 2.20032L11.0001 8.79889L20.4266 2.20032C20.8791 1.8836 21.5026 1.9936 21.8193 2.44604C22.136 2.89849 22.026 3.52203 21.5736 3.83875L11.5736 10.8387C11.2292 11.0798 10.7709 11.0798 10.4266 10.8387L0.426626 3.83875C-0.0258233 3.52203 -0.135862 2.89849 0.180853 2.44604Z"/>
+        </symbol>
+        <symbol viewBox="0 0 109 41" xmlns="http://www.w3.org/2000/svg" id="akticom">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.466 13.346L28.9861 0.300449C29.1562 0.146688 29.3715 0.0504996 29.6007 0.0258336C29.8299 0.00116765 30.0611 0.0493003 30.2608 0.163265C30.4605 0.277229 30.6182 0.451101 30.7111 0.659636C30.804 0.868172 30.8273 1.10053 30.7775 1.32301L28.104 22.8397C28.006 24.851 26.6294 24.7992 26.0528 24.0154C25.1981 22.0221 23.3747 19.9612 20.8745 18.3305C21.2496 18.3518 21.6242 18.2798 21.9639 18.121C25.581 16.1592 24.1132 13.1659 24.6351 9.74229C21.9001 11.8978 18.5383 12.1433 18.6295 16.2178C18.6592 16.5779 18.7782 16.9252 18.9759 17.2291L18.9942 17.2584C16.3321 15.9453 13.6244 15.4227 11.4592 15.6817C10.4769 15.5871 9.75209 14.4362 11.466 13.346Z"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.3316 19.067C2.56128 22.3554 -0.784552 27.2791 0.220566 28.4548C1.44221 29.876 1.98237 27.921 3.65073 29.8062C5.31909 31.6914 3.47751 36.6781 7.4524 39.2008C11.6529 41.3427 15.0968 37.275 17.5879 37.757C20.079 38.239 18.6363 39.6805 20.4916 40.0093C22.0186 40.2841 24.6602 34.9596 25.1593 29.2341C25.5286 24.9884 23.4363 21.9861 20.0107 19.7742C20.3343 20.531 20.1543 22.0649 17.891 25.529C14.7321 30.367 12.2592 32.286 11.6848 31.9482C11.1105 31.6103 11.5481 28.5494 14.2079 23.4276C16.1133 19.7585 17.3645 18.8373 18.1919 18.7359C14.5452 16.9183 10.8666 16.6277 7.3316 19.067Z"/>
+                <path d="M104.062 31.9167C102.132 31.9167 101.168 31.0758 101.168 29.394C101.168 28.7836 101.336 27.8174 101.676 26.466C102.015 25.1146 102.184 24.2136 102.184 23.6933C102.184 22.9298 101.913 22.5469 101.366 22.5469C100.819 22.5469 100.336 22.9748 99.9072 23.824C99.7791 24.0758 99.6753 24.339 99.5973 24.61L98.0634 31.7815H94.8064L96.4611 24.065C96.5075 23.8823 96.5304 23.6947 96.5295 23.5064C96.5295 22.8555 96.3016 22.5266 95.8617 22.5266C95.6355 22.5297 95.4134 22.5874 95.2148 22.6945C95.0162 22.8017 94.8471 22.9551 94.7221 23.1415C94.394 23.5829 94.152 24.0809 94.0087 24.61L92.4748 31.7815H89.2156L90.7472 24.6461C90.1358 24.8768 89.5018 25.0443 88.8555 25.1461C88.6777 27.1837 88.0844 28.8129 87.0755 30.0337C86.0666 31.2545 84.8586 31.8656 83.4516 31.8671C81.7133 31.8671 80.5935 31.2349 80.0921 29.9706C79.9974 29.7322 79.9287 29.4846 79.8869 29.2319C78.4055 31.0187 76.6763 31.9122 74.6995 31.9122C73.6253 31.9122 72.7683 31.6374 72.1286 31.0878C71.7652 30.7635 71.502 30.3442 71.3697 29.8783C70.4139 31.2297 69.1391 31.9054 67.5452 31.9054C66.9507 31.9057 66.3791 31.679 65.9498 31.2725C65.5818 30.9097 65.3522 30.4322 65.3002 29.9211C64.349 31.247 63.0848 31.9099 61.5077 31.9099C60.9131 31.9102 60.3415 31.6835 59.9122 31.277C59.5681 30.9414 59.3461 30.5026 59.2809 30.0292C58.4498 31.2845 57.4158 31.9122 56.1789 31.9122C55.2369 31.9122 54.5258 31.6922 54.0456 31.2522C53.567 30.8017 53.33 30.1824 53.33 29.3715C53.3362 28.9786 53.3804 28.5871 53.4622 28.2025L53.6513 27.3309C53.7059 27.0608 53.7349 26.7864 53.7379 26.511C53.7379 25.7925 53.4667 25.4299 52.9243 25.4299C52.4935 25.4299 51.9397 25.7047 51.2536 26.261L50.073 31.7815H46.8001L50.0844 16.5782L53.428 16.1277L51.73 24.0042L56.0923 20.6099H58.3396L53.8154 23.7249C54.0603 23.6616 54.3122 23.6291 54.5653 23.628C55.3979 23.628 56.0202 23.8863 56.4319 24.4028C56.849 24.9279 57.0674 25.5803 57.0496 26.2475C57.0466 26.5325 57.0176 26.8167 56.963 27.0966L56.7077 28.2115C56.6458 28.4466 56.6091 28.6874 56.5983 28.93C56.5983 29.4841 56.9037 29.7612 57.51 29.7612C58.1162 29.7612 58.6222 29.3693 59.0142 28.5832C59.1305 28.3399 59.2421 28.0764 59.3766 27.7859L60.7441 21.5086H59.9943L60.1834 20.6076H60.9219L61.6057 17.5197L64.9538 17.0692L64.1766 20.6054H65.5441L65.3663 21.5063H63.9988L62.5515 28.2093C62.4918 28.471 62.4612 28.7384 62.4603 29.0066C62.4603 29.5089 62.7658 29.7589 63.372 29.7589C63.6049 29.7523 63.834 29.6987 64.0453 29.6015C64.2565 29.5043 64.4455 29.3655 64.6005 29.1936C64.9887 28.8005 65.2687 28.3159 65.4142 27.7859L66.9481 20.6144H70.2141L68.5959 28.2048C68.5362 28.4665 68.5056 28.7339 68.5047 29.0021C68.5047 29.5044 68.8101 29.7544 69.4164 29.7544C69.6493 29.7478 69.8784 29.6942 70.0897 29.597C70.3009 29.4998 70.4898 29.361 70.6449 29.1891C70.8491 28.9852 71.0232 28.7539 71.1623 28.5021C71.1623 28.4593 71.1623 28.4143 71.1623 28.3692C71.1682 26.634 71.6207 24.9288 72.4773 23.414C73.0732 22.276 74.0355 21.3663 75.2123 20.8284C75.7875 20.5544 76.4177 20.4119 77.0562 20.4117C78.8689 20.4117 79.7753 21.0874 79.7753 22.4388C79.7753 23.0086 79.659 23.4231 79.422 23.6911C79.3278 23.8118 79.2075 23.9103 79.0699 23.9792C78.9323 24.0482 78.7808 24.086 78.6266 24.0898C78.3238 24.0867 78.0288 23.995 77.7787 23.8262C77.9508 23.4064 78.0442 22.9592 78.0545 22.5064C78.0545 21.8952 77.8395 21.5897 77.4095 21.5897C76.9764 21.5897 76.5229 21.9726 76.042 22.7451C75.2995 23.9952 74.8189 25.38 74.6289 26.8173C74.5516 27.3492 74.515 27.886 74.5195 28.4233C74.5195 29.4999 75.0369 30.036 76.0762 30.036C76.8476 30.0623 77.6097 29.8625 78.2664 29.4616C78.8427 29.074 79.3706 28.6203 79.8391 28.1102C79.8562 27.6867 79.9004 27.2646 79.9713 26.8466C80.0696 26.2634 80.2144 25.6888 80.4043 25.1281C80.7848 23.9088 81.4553 22.7974 82.3599 21.887C82.8374 21.4068 83.4087 21.0274 84.0391 20.7719C84.6695 20.5163 85.3458 20.39 86.027 20.4004C87.9613 20.4004 88.9292 21.5904 88.9307 23.9704V23.9929C89.0552 24.0112 89.181 24.0187 89.3068 24.0154C89.8467 23.9846 90.3762 23.8548 90.868 23.6325L90.9729 23.5897L91.6156 20.6099H94.8725L94.6309 21.7676C94.9664 21.3666 95.3883 21.0448 95.8659 20.8257C96.3435 20.6067 96.8646 20.496 97.391 20.5018C98.7251 20.5018 99.4993 21.1414 99.7135 22.4208C100.543 21.1534 101.592 20.5213 102.861 20.5243C103.509 20.5012 104.143 20.71 104.648 21.1122C105.127 21.5041 105.368 22.0807 105.368 22.8374C105.349 23.7223 105.223 24.6018 104.992 25.4569L104.461 27.6395C104.358 28.0167 104.3 28.4045 104.288 28.7949C104.288 29.4361 104.563 29.7567 105.113 29.7567C105.332 29.77 105.552 29.7337 105.755 29.6506C105.958 29.5674 106.139 29.4396 106.284 29.2769C106.629 28.8228 106.901 28.3192 107.091 27.7836H108.042C107.479 29.4263 106.772 30.5803 105.92 31.2455C105.397 31.6727 104.743 31.9111 104.064 31.9212L104.062 31.9167ZM37.3894 31.0157C37.8452 28.5411 38.7516 25.8226 40.1085 22.86C41.1565 22.9577 42.1801 23.2312 43.1352 23.6686L41.4007 31.777H44.6645L48.2087 15.3349C47.6451 15.0964 47.0341 14.9879 46.4218 15.0173C45.147 15.0173 43.8235 15.6404 42.4515 16.8867C40.9497 18.2886 39.6402 19.8788 38.5563 21.6167C38.0709 21.5716 37.6743 21.5491 37.3734 21.5491C36.0652 21.5491 34.9644 21.8186 34.0709 22.3577C33.1775 22.8968 32.7399 23.5514 32.7581 24.3218C32.7492 24.4965 32.7798 24.6711 32.8476 24.8327C32.9154 24.9944 33.0187 25.1391 33.1501 25.2565C33.4739 25.5062 33.88 25.6282 34.2897 25.5988C34.5661 25.5997 34.8368 25.5215 35.0692 25.3736C35.175 25.3196 35.2648 25.2393 35.3295 25.1405C35.3943 25.0418 35.4318 24.928 35.4384 24.8105C35.4441 24.6215 35.4091 24.4334 35.3359 24.2587C35.272 24.11 35.2037 24.0334 35.1399 24.0334C35.2213 23.8371 35.3451 23.6607 35.5025 23.5164C35.66 23.3721 35.8473 23.2634 36.0515 23.1978C36.6126 23.0054 37.1994 22.8961 37.7928 22.8735C37.2982 23.7271 36.847 24.5875 36.4253 25.4637C35.1171 28.2581 34.4622 30.4264 34.4607 31.9685C34.4607 32.9865 34.8413 33.687 35.6002 34.0632C35.9581 34.2456 36.5848 34.3379 37.4783 34.3379C37.2451 33.9545 37.1368 33.5094 37.1683 33.0631C37.1836 32.3821 37.2599 31.7037 37.3962 31.036L37.3894 31.0157ZM40.5802 21.9027C42.0025 19.0633 43.3639 17.2974 44.6645 16.6052L43.3494 22.6865C42.4563 22.3425 41.5321 22.0831 40.5894 21.9117L40.5802 21.9027ZM71.0073 17.6233C71.0115 17.3877 70.9667 17.1539 70.8758 16.9361C70.7848 16.7184 70.6496 16.5214 70.4785 16.3574C70.3106 16.1884 70.1096 16.0549 69.8879 15.9651C69.6661 15.8752 69.4281 15.8309 69.1885 15.8349C68.9514 15.8296 68.7159 15.874 68.4974 15.9653C68.279 16.0565 68.0826 16.1925 67.9213 16.3642C67.7532 16.5323 67.6213 16.7323 67.5335 16.9522C67.4458 17.1721 67.404 17.4073 67.4107 17.6435C67.4101 17.8749 67.4558 18.1041 67.5452 18.3179C67.6346 18.5318 67.7659 18.726 67.9315 18.8895C68.0972 19.053 68.2939 19.1825 68.5104 19.2706C68.7269 19.3586 68.9589 19.4035 69.193 19.4026C69.4298 19.4059 69.6649 19.3628 69.8848 19.2758C70.1046 19.1888 70.3049 19.0597 70.4739 18.8958C70.6474 18.7361 70.7847 18.542 70.877 18.3262C70.9693 18.1104 71.0145 17.8778 71.0095 17.6435L71.0073 17.6233ZM86.9729 25.1979C86.5649 25.0965 86.3621 24.7655 86.3621 24.2069C86.3431 23.9649 86.4013 23.7232 86.5284 23.5156C86.6555 23.3079 86.8452 23.1449 87.0709 23.0492C87.0716 22.7024 86.9937 22.36 86.843 22.0469C86.7222 21.8487 86.4852 21.7518 86.1296 21.7518C85.4459 21.7518 84.7758 22.5041 84.1422 24.0042C83.5086 25.5042 83.1917 26.8579 83.1917 28.0269C83.1917 28.7454 83.2556 29.2048 83.3878 29.3985C83.4868 29.5603 83.6341 29.6878 83.8094 29.7634C84.0022 29.8205 84.2032 29.8456 84.4043 29.8377C84.9216 29.8377 85.4299 29.3873 85.9382 28.4863C86.4883 27.4693 86.8401 26.3591 86.9752 25.2137L86.9729 25.1979Z"/>
+                <path d="M49.6559 37.6241V34.7614H50.1118C50.3062 34.7547 50.5007 34.7721 50.6907 34.8132C50.8519 34.8516 50.9965 34.94 51.1032 35.0654C51.2045 35.1888 51.2586 35.3435 51.2559 35.5024C51.2569 35.6049 51.2327 35.7062 51.1853 35.7975C51.1294 35.8967 51.0514 35.9822 50.9573 36.0475C51.1118 36.1126 51.2451 36.2186 51.3425 36.3538C51.4262 36.4835 51.469 36.6347 51.4656 36.7885C51.4696 36.9476 51.426 37.1043 51.3402 37.239C51.2625 37.3659 51.1504 37.4689 51.0166 37.5363C50.8435 37.61 50.6556 37.6439 50.4673 37.6354L49.6559 37.6241ZM50.2075 35.2839V35.8876H50.326C50.4323 35.8951 50.538 35.8656 50.6246 35.8042C50.6568 35.7762 50.6823 35.7415 50.6992 35.7025C50.7162 35.6635 50.7242 35.6214 50.7226 35.579C50.7245 35.5386 50.7171 35.4984 50.7009 35.4613C50.6847 35.4243 50.6601 35.3913 50.6291 35.365C50.5482 35.3066 50.4488 35.2787 50.3488 35.2862L50.2075 35.2839ZM50.2075 36.3718V37.1061H50.3442C50.5013 37.1199 50.6591 37.0902 50.8001 37.0205C50.8394 36.9919 50.8709 36.9541 50.8916 36.9104C50.9123 36.8667 50.9216 36.8186 50.9186 36.7705C50.921 36.7142 50.9097 36.6582 50.8855 36.6072C50.8613 36.5562 50.8249 36.5118 50.7796 36.4777C50.6424 36.3966 50.4831 36.3597 50.3237 36.3718H50.2075ZM53.5237 34.7614H54.0821L55.1943 37.6219H54.6245L54.3966 37.0317H53.216L52.9881 37.6219H52.4137L53.5283 34.7614H53.5237ZM53.8063 35.5204L53.4211 36.5024H54.1915L53.8086 35.5204H53.8063ZM57.5442 36.3515L57.4667 36.2705L56.653 37.6219H55.9989L57.0678 35.9686L56.0992 34.7614H56.7624L57.5464 35.7839V34.7614H58.1117V35.7839L58.8866 34.7614H59.5521L58.5812 35.9664L59.6501 37.6196H58.996L58.1823 36.2682L58.1048 36.3493V37.6196H57.5464V36.3493L57.5442 36.3515ZM60.6894 34.7614H62.2689V35.2952H61.2364V35.811H62.2689V36.338H61.2364V37.0903H62.2689V37.6241H60.6894V34.7614ZM63.4244 34.7614H63.9828V35.8402H64.9492V34.7614H65.5053V37.6219H64.9492V36.3673H63.992V37.6219H63.4336V34.7614H63.4244ZM69.6534 34.7614C69.8848 34.7496 70.1165 34.7794 70.3372 34.8492C70.4752 34.9043 70.5912 35.0024 70.6677 35.1285C70.7515 35.2688 70.7933 35.4297 70.7885 35.5925C70.7948 35.7716 70.7384 35.9474 70.6289 36.0903C70.5192 36.2259 70.3681 36.3231 70.1982 36.3673C70.0069 36.405 69.8118 36.4201 69.617 36.4123V37.6241H69.0654V34.7614H69.6534ZM69.6215 35.8876H69.797C69.8937 35.8922 69.9905 35.8823 70.0842 35.8583C70.1361 35.8403 70.1808 35.8063 70.2118 35.7614C70.2434 35.7132 70.2593 35.6566 70.2574 35.5992C70.2606 35.5511 70.2502 35.503 70.2272 35.4604C70.2042 35.4179 70.1697 35.3825 70.1275 35.3583C70.0169 35.3116 69.8964 35.2923 69.7765 35.3019H69.6215V35.8876ZM71.9805 34.7614H73.5599V35.2952H72.5275V35.811H73.5599V36.338H72.5275V37.0903H73.5599V37.6241H71.9805V34.7614ZM74.8614 36.8763C74.9143 36.9646 74.9888 37.0385 75.0779 37.0912C75.1671 37.1439 75.2681 37.1738 75.3719 37.1781C75.4868 37.1826 75.5991 37.144 75.6864 37.07C75.7263 37.033 75.7575 36.9878 75.778 36.9376C75.7984 36.8875 75.8076 36.8335 75.8049 36.7795C75.8065 36.7255 75.7971 36.6717 75.7771 36.6213C75.7571 36.571 75.727 36.5252 75.6887 36.4867C75.5467 36.3905 75.3741 36.3489 75.2032 36.3696H75.0847V35.8876H75.2055C75.325 35.8962 75.4435 35.8609 75.5383 35.7884C75.5755 35.755 75.6049 35.7138 75.6242 35.6679C75.6435 35.622 75.6523 35.5724 75.65 35.5227C75.6522 35.4778 75.6448 35.4329 75.6283 35.391C75.6118 35.349 75.5866 35.311 75.5542 35.2794C75.5206 35.2487 75.4811 35.2249 75.4381 35.2094C75.395 35.1939 75.3493 35.1871 75.3035 35.1893C75.1587 35.1994 75.0233 35.2638 74.9252 35.3695L74.6015 35.0114C74.7245 34.8872 74.874 34.7918 75.0391 34.7321C75.1439 34.7035 75.2519 34.6884 75.3605 34.687C75.5775 34.6809 75.7893 34.7538 75.9554 34.892C76.035 34.9596 76.0981 35.0442 76.14 35.1394C76.1818 35.2346 76.2013 35.3379 76.197 35.4416C76.1969 35.5439 76.1784 35.6453 76.1423 35.7411C76.0748 35.8717 75.9692 35.9792 75.8391 36.0497C75.9946 36.1076 76.1275 36.2127 76.2188 36.3498C76.3102 36.487 76.3552 36.6493 76.3474 36.8133C76.3524 36.9333 76.3307 37.0531 76.2839 37.164C76.237 37.2749 76.1661 37.3743 76.0762 37.4552C75.8872 37.6179 75.6429 37.7039 75.3924 37.6962C75.2269 37.6988 75.0628 37.6657 74.9115 37.5993C74.7295 37.4975 74.5735 37.3557 74.4557 37.1849L74.8773 36.8786L74.8614 36.8763ZM78.3348 36.9687L77.3092 34.7614H77.9405L78.6243 36.356L79.1827 34.7614H79.7502L78.9798 36.8065C78.9006 37.0738 78.7521 37.3161 78.5491 37.5092C78.4085 37.6223 78.2334 37.685 78.0522 37.6872C77.8973 37.6803 77.7459 37.6393 77.6091 37.5672C77.4723 37.4951 77.3535 37.3937 77.2613 37.2705L77.6237 36.9101C77.6725 36.9793 77.7359 37.0373 77.8094 37.08C77.883 37.1228 77.965 37.1493 78.0499 37.1579C78.1052 37.1602 78.1597 37.1443 78.2049 37.1128C78.2592 37.0699 78.3082 37.0208 78.3508 36.9664L78.3348 36.9687ZM82.6334 37.6219L81.8334 35.5204L81.0197 37.6219H80.4476L81.5621 34.7614H82.1205L83.2328 37.6219H82.6334ZM84.2037 37.6219V34.7614H84.7553V35.8402H84.8738C85.0683 35.835 85.2624 35.8617 85.4481 35.9191C85.608 35.9769 85.7463 36.0813 85.8447 36.2186C85.9581 36.3728 86.0166 36.5597 86.0111 36.7502C86.0165 36.9268 85.9663 37.1007 85.8675 37.248C85.7854 37.3724 85.6703 37.4721 85.5347 37.5363C85.3691 37.599 85.1923 37.6274 85.0151 37.6196L84.2037 37.6219ZM84.7553 36.3268V37.1016H84.892C85.0489 37.1163 85.2067 37.0874 85.3479 37.0182C85.3894 36.9836 85.4217 36.9394 85.442 36.8895C85.4622 36.8396 85.4698 36.7856 85.4641 36.7322C85.4641 36.4619 85.265 36.3268 84.867 36.3268H84.7553ZM88.4544 34.7614V35.2974H87.9279V37.6196H87.3695V35.2997H86.8567V34.7614H88.4544ZM90.3689 34.7614H90.9318L92.0441 37.6219H91.472L91.2441 37.0317H90.0658L89.8378 37.6219H89.2658L90.3803 34.7614H90.3689ZM90.6515 35.5204L90.2663 36.5024H91.0367L90.6538 35.5204H90.6515ZM92.8304 34.7614H94.4258V35.2974H93.8993V37.6196H93.3409V35.2997H92.8281L92.8304 34.7614Z"/>
+        </symbol>
+    </svg>   <script src="assets/js/app.js"></script>
+</body>
+</html>
