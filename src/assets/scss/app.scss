@@ -4,11 +4,14 @@
 @import "includes/bs-grid/grid";
 @import "includes/base";
 
+@import "components/pagination";
+@import "components/crumbs";
 @import "components/banner";
 @import "components/header";
 @import "components/about";
 @import "components/dir";
 @import "components/feed";
-@import "components/crumbs";
+@import "components/news";
+@import "components/footer";
 
-@import "pages/home";
+@import "pages/news-page";

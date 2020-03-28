@@ -1,0 +1,36 @@
+.layout {
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+  &__overlay {
+    background-color: $blue;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 3;
+    @include ovl;
+    @include ease;
+  }
+  &__grid {
+    position: fixed;
+    max-width: 1140px;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    z-index: 1;
+    opacity: .1;
+    @include r(1200) {
+      display: none;
+    }
+    &-item {
+      height: 100%;
+      border-right: 1px solid #553f3f;
+      &:first-child {
+        border-left: 1px solid #553f3f;
+      }
+    }
+  }
+}

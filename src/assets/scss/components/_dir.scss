@@ -1,4 +1,24 @@
 .dir {
+  &__in {
+    position: relative;
+    z-index: 3 !important;
+    .container {
+      position: relative;
+    }
+  }
+  &__decor {
+    position: absolute;
+    max-height: 900px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    @include r(1200) {
+      max-height: 360px;
+      top: -50px;
+      right: 50%;
+      transform: translateX(50%) rotate(-90deg);
+    }
+  }
   &__item {
     padding: 30px 0;
   }
@@ -6,25 +26,40 @@
     font-family: $f-bold;
     margin-bottom: 30px;
     max-width: 570px;
+    @include r(800) {
+      margin-bottom: 15px;
+    }
   }
   &__list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     &-col {
       flex-basis: 50%;
+      @include r(800) {
+        flex-basis: 100%;
+        margin-bottom: 8px;
+      }
     }
     &-item {
       font-family: $f-reg;
       font-size: 14px;
       &:not(:last-child) {
         margin-bottom: 15px;
+        @include r(800) {
+          margin-bottom: 8px;
+        }
       }
     }
   }
   &__image {
     max-width: 400px;
+    @include r(1200) {
+      max-width: 260px;
+    }
     &-wrapper {
       position: relative;
+      text-align: center;
     }
   }
   &__switch-button {
@@ -50,6 +85,15 @@
           transform: translateX(0);
         }
       }
+    }
+  }
+  &__button {
+    @include r(1200) {
+      margin-bottom: 25px;
+    }
+    @include r(600) {
+      width: 100%;
+      justify-content: center;
     }
   }
 }

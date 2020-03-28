@@ -1,65 +1,77 @@
-.checkbox {
-  cursor: pointer;
-  position: relative;
-  margin-bottom: 0;
-  &__text {
-    font-size: 14px;
+.form {
+  //&__pol {
+  //  max-width: 490px;
+  //}
+  &__checkbox {
     position: relative;
-    padding-left: 30px;
+    display: flex;
+    align-items: center;
     cursor: pointer;
-    width: 100%;
-    display: block;
+    margin-top: 25px;
+    margin-bottom: 25px;
     @include r(1200) {
-      font-size: 12px
+      margin-top: 15px;
+      margin-bottom: 15px;
     }
-    &::before {
-      content: '';
+    &-input {
       position: absolute;
-      top: 0px;
-      left: -2px;
-      width: 20px;
-      height: 20px;
-      border-radius: 2px;
-      border: 1px solid $dark;
-      background: #fff;
-    }
-    &::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      margin-top: -11px;
-      left: 2px;
-      width: 12px;
-      height: 12px;
-      background-color: $dark;
-      border-radius: 2px;
       opacity: 0;
-      transform: scale(0);
-      transition: 0.3s;
-      a {
-        color: $dark;
-        text-decoration: underline;
-        position: relative;
-        z-index: 2;
+      z-index: 1;
+      &:checked ~ .form__checkbox-gal {
+        svg {
+          opacity: 1;
+          transform: scale(1) rotate(0);
+        }
+        span {
+          opacity: 0;
+          transform: translate(-50%,-50%) rotate(-20deg);
+        }
       }
     }
-  }
-}
-input[type="checkbox"],
-input[type="radio"] {
-  position: absolute;
-  z-index: 1;
-  opacity: 0;
-  width: 100%;
-  cursor: pointer;
-  &:checked + .checkbox__text,
-  &:checked + .checkbox__text {
-    &::after {
-      opacity: 1;
-      transform: scale(1);
+    &-gal {
+      position: relative;
+      background: $gr;
+      border: 3px solid $tr;
+      width: 48px;
+      min-width: 48px;
+      height: 48px;
+      margin-right: 10px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include ease-in-out;
+      svg {
+        opacity: 0;
+        transform: scale(.5) rotate(20deg);
+        fill: none;
+        stroke: $blue;
+        @include ease-in-out;
+      }
+      &-square {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border: 2px solid $blue;
+        border-radius: 3px;
+        @include ease-in-out;
+      }
+      &:hover {
+        border-color: $blue;
+      }
     }
-    &::before {
-      background-color: #fff;
+    &-text {
+      font-family: $f-reg;
+      font-size: 14px;
+    }
+    &-link {
+      border-bottom: 1px solid $blue;
+      &:hover {
+        border-color: $dark;
+      }
     }
   }
 }

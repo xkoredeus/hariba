@@ -10,6 +10,7 @@
 @import "common/checkbox";
 @import "common/section";
 @import "common/owl-custom";
+@import "common/_layout.scss";
 
 html, body {
   position: relative;
@@ -24,41 +25,25 @@ html, body {
     overflow: hidden;
     padding-right: 15px;
   }
+  @include r(1200) {
+    font-size: 14px;
+  }
 }
 .svg-sprite {
   position: absolute;
   bottom: 0;
 }
-.layout {
+.hero {
   position: relative;
-  min-height: 100%;
+  z-index: 5;
   overflow: hidden;
-  &__overlay {
-    background-color: $blue;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 3;
-    @include ovl;
-    @include ease;
-  }
-  &__grid {
-    position: fixed;
-    max-width: 1140px;
+  &--inner {
+    min-height: 95px;
     width: 100%;
-    height: 100%;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    z-index: 1;
-    opacity: .2;
-    &-item {
-      height: 100%;
-      border-right: 1px solid #553f3f;
-      &:first-child {
-        border-left: 1px solid #553f3f;
-      }
+    background: url('../img/header__bg.jpg');
+    @include cv;
+    @include r(800) {
+      min-height: 52px;
     }
   }
 }

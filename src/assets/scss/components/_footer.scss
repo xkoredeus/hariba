@@ -1,0 +1,95 @@
+.footer {
+  position: relative;
+  color: #fff;
+  background-color: #92939F;
+  padding: 50px 0;
+  z-index: 2;
+  &__logo {
+    fill: #fff;
+    @include ease;
+    &:hover {
+      opacity: .7;
+    }
+    @include r(800) {
+      svg {
+        width: 135px;
+        height: 21px;
+      }
+    }
+  }
+  &__link {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+  }
+  &__title {
+    font-family: $h-hev;
+    font-size: 26px;
+    color: #fff;
+    margin-bottom: 25px;
+    @include r(800) {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+  }
+  &__tel {
+    @include r(800) {
+      font-size: 28px;
+    }
+  }
+  &__form {
+    position: relative;
+    @include r(600) {
+      max-width: 370px;
+    }
+    input {
+      color: #fff;
+      border-bottom-color: #fff;
+      &:focus {
+        border-bottom-color: $blue;
+      }
+      &::placeholder {
+        color: #fff;
+      }
+    }
+    &-button {
+      top: -6px;
+      right: 0;
+      position: absolute;
+      padding-right: 0;
+      &::before {
+        display: none;
+      }
+      svg {
+        fill: $dark;
+        stroke: none;
+        transform: translateX(0) !important;
+      }
+      .button {
+        &__icon {
+          width: 40px;
+          height: 40px;
+          margin-right: 0;
+          background-color: #fff;
+          @include ease-in-out;
+        }
+      }
+      &:hover {
+        .button {
+          &__icon {
+            background-color: $blue;
+            svg {
+              fill: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__akticom {
+    fill: #fff;
+    @include ease-in-out;
+    &:hover {
+      fill: #6a438e;
+    }
+  }
+}

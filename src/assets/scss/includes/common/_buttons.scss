@@ -7,6 +7,10 @@
   border: none;
   outline: none;
   padding: 0 25px 0 0;
+  @include r(1200) {
+    background-color: $blue;
+    border-radius: 45px;
+  }
   &::before {
     position: absolute;
     content: '';
@@ -27,6 +31,9 @@
     border-radius: 50%;
     margin-right: 13px;
     @include flex-center;
+    @include r(1200) {
+      margin-right: 0;
+    }
     svg {
       fill: none;
       stroke: #fff;
@@ -40,6 +47,9 @@
     text-transform: uppercase;
     color: $dark;
     @include ease-in-out;
+    @include r(1200) {
+      color: #fff;
+    }
   }
   &:hover {
     &::before {
@@ -51,6 +61,13 @@
           transform: translateX(10px);
         }
       }
+      &__text {
+        color: #fff;
+      }
+    }
+  }
+  &--white {
+    .button {
       &__text {
         color: #fff;
       }

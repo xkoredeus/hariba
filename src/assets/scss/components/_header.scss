@@ -4,9 +4,27 @@
   top: 0;
   width: 100%;
   padding: 30px 0;
-  background: rgba(146, 147, 159, 0.9);
-  backdrop-filter: blur(20px);
   z-index: 5;
+  @include ease-in-out;
+  @include r(800) {
+    padding: 15px 0;
+  }
+  &::before {
+    @include ovl;
+    background: #92939f91;
+    backdrop-filter: blur(20px);
+    opacity: 0;
+    @include ease-in-out;
+  }
+  &__in {
+    position: relative;
+    @include r(1200) {
+      height: 35px;
+    }
+    @include r(800) {
+      height: 22px;
+    }
+  }
   &__logo {
     @include ease;
     &-icon {
@@ -16,10 +34,20 @@
     &:hover {
       opacity: .7;
     }
+    @include r(800) {
+      svg {
+        width: 135px;
+        height: 21px;
+      }
+    }
   }
   &__center {
     @include r(1200) {
       width: 100%;
+      @include ease-in-out;
+      transform: translateY(-1000px);
+      opacity: 0;
+      visibility: hidden;
     }
   }
   &__nav {
@@ -27,6 +55,9 @@
       position: relative;
       font-size: 18px;
       color: #fff;
+      transform: translateX(-10px);
+      opacity: 0;
+      visibility: hidden;
       @include rmin(1200) {
         &:not(:last-child) {
           margin-right: 25px;
@@ -59,6 +90,9 @@
     position: relative;
     font-size: 18px;
     color: #fff;
+    transform: translateX(-10px);
+    opacity: 0;
+    visibility: hidden;
     &::after {
       position: absolute;
       content: '';
@@ -87,6 +121,10 @@
       background: none;
       outline: none;
       box-shadow: none;
+      @include r(800) {
+        width: 22px;
+        height: 22px;
+      }
     }
     &-hamb,
     &-cross {
@@ -96,14 +134,80 @@
       transform: translate(-50%,-50%);
       @include ease-in-out;
       &:hover {
-        opacity: .8;
+        opacity: .6;
       }
     }
     &-hamb {
       fill: $blue;
+      @include r(800) {
+        width: 22px;
+        height: 20px;
+      }
     }
     &-cross {
       fill: #fff;
+      opacity: 0;
+      visibility: hidden;
+      transform: translate(-50%,-50%) rotate(20deg) scale(.5);
+      @include r(800) {
+        width: 21px;
+        height: 21px;
+      }
+    }
+  }
+}
+.menu-open {
+  @include r(1200) {
+    overflow: hidden;
+  }
+  .header {
+    &::before {
+      opacity: 1;
+    }
+    &__logo {
+      &-icon {
+        fill: #fff;
+      }
+    }
+    &__nav {
+      &-link {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &__tel {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+    }
+    &__menu {
+      &-hamb {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(-50%,-50%) scale(.5);
+      }
+      &-cross {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%,-50%) rotate(0) scale(1);
+      }
+    }
+    @include r(1200) {
+      height: 100%;
+      .container {
+        height: 100%;
+      }
+      &__in {
+        height: 100%;
+        align-items: flex-start !important;
+        //justify-content: flex-start !important;
+      }
+      &__center {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
     }
   }
 }
