@@ -1,7 +1,10 @@
 .layout {
   position: relative;
-  min-height: 100%;
   overflow: hidden;
+  min-height: 63vh;
+  @include r(800) {
+    min-height: 53vh;
+  }
   &__overlay {
     background-color: $blue;
     opacity: 0;

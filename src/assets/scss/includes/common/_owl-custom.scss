@@ -10,6 +10,7 @@
     display: flex;
     justify-content: center;
     bottom: 0;
+    z-index: 5;
 
     button.owl-dot {
       width: 20px;
@@ -75,7 +76,7 @@
           max-height: 17px;
           height: auto;
           fill: none;
-          stroke: #fff;
+          stroke: $dark;
           @include ease;
           @include r(1200) {
             max-height: 12px
@@ -83,10 +84,9 @@
         }
 
         &:hover {
-          border-color: $dark;
-
+          border-color: $blue;
+          background-color: $blue;
           span {
-            background-color: $dark;
           }
 
           svg {

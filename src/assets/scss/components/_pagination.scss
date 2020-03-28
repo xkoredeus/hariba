@@ -28,13 +28,12 @@ div {
             justify-content: center;
             align-items: center;
             &.active {
-              background-color: $orange;
               a {
-                color: #fff;
+                font-family: $f-bold;
               }
             }
             a {
-              font-family: $h-bold;
+              font-family: $f-reg;
               color: $dark;
               border: none;
               display: flex;
@@ -49,12 +48,11 @@ div {
             opacity: 1;
             color: #fff;
             position: relative;
-            border-radius: 50%;
             overflow: hidden;
             background-color: $tr;
-            &:hover {
-              background-color: $orange;
-            }
+            border-radius: 50%;
+            border: 1px solid $dark;
+            @include ease;
             span {
               width: 24px;
               height: 24px;
@@ -67,21 +65,27 @@ div {
                 max-height: 17px;
                 height: auto;
                 fill: none;
-                stroke: $green;;
+                stroke: $dark;
                 @include ease;
               }
-              &_prev {
+            }
+            &_prev {
+              margin-right: 25px;
+              @include r(1200) {
                 margin-right: 5px
               }
-              &_next {
-                margin-left: 5px
+            }
+            &_next {
+              margin-left: 25px;
+              @include r(1200) {
+                margin-left: 5px;
               }
-              &:hover {
-                background-color: $orange;
-                border-color: $orange;
-                svg {
-                  stroke: #fff
-                }
+            }
+            &:hover {
+              background-color: $blue;
+              border-color: $blue;
+              svg {
+                stroke: #fff
               }
             }
           }

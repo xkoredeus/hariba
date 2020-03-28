@@ -1,14 +1,22 @@
-.hero {
-  position: relative;
-  z-index: 5;
-  overflow: hidden;
-  &--inner {
-    min-height: 95px;
-    width: 100%;
-    background: url('../img/header__bg.jpg');
-    @include cv;
-    @include r(800) {
-      min-height: 52px;
+.news-page {
+  &__image {
+    position: absolute;
+    right: 0;
+    max-width: 700px;
+    @include r(1200) {
+      position: relative;
+      max-height: 250px;
+      max-width: 100%;
+      height: auto;
+    }
+    &-wrapper {
+      position: relative;
+    }
+  }
+  &__button {
+    @include r(600) {
+      width: 100%;
+      justify-content: center;
     }
   }
 }

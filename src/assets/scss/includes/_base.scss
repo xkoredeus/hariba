@@ -10,7 +10,7 @@
 @import "common/checkbox";
 @import "common/section";
 @import "common/owl-custom";
-@import "common/_layout.scss";
+@import "common/layout";
 
 html, body {
   position: relative;
@@ -46,4 +46,8 @@ html, body {
       min-height: 52px;
     }
   }
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
 }
