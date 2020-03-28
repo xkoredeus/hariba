@@ -15,12 +15,32 @@
 
 <body>
     {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
-
-    <main role="main" class="container">
-        {{> crumbs}}
-        {{> body}}
+    {{> preloader}}
+    <section class="hero">
+        {{> header}}
+        {{> banner}}
+    </section>
+    <main class="layout">
+        <div class="layout__overlay js-layout__overlay"></div>
+        <div class="layout__grid">
+            <div class="layout__grid-item">
+                <div class="layout__grid-item-in"></div>
+            </div>
+            <div class="layout__grid-item">
+                <div class="layout__grid-item-in"></div>
+            </div>
+            <div class="layout__grid-item">
+                <div class="layout__grid-item-in"></div>
+            </div>
+            <div class="layout__grid-item">
+                <div class="layout__grid-item-in"></div>
+            </div>
+        </div>
+        <div class="layout__content">
+            {{> body}}
+        </div>
     </main>
-
+    {{> svg}}
    <script src="{{root}}assets/js/app.js"></script>
 </body>
 </html>

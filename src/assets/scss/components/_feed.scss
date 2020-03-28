@@ -1,0 +1,14 @@
+.feed {
+  &__image {
+    position: absolute;
+    right: -150px;
+    top: -150px;
+    max-width: 800px;
+    &-wrapper {
+      position: relative;
+    }
+  }
+  &__title {
+    text-align: right;
+  }
+}

@@ -14,10 +14,9 @@
 html, body {
   position: relative;
   font-family: $h-reg, Roboto, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.4;
   color: $dark;
-  background-color: #fff;
   padding: 0;
   margin: 0;
   max-width: 100%;
@@ -26,8 +25,40 @@ html, body {
     padding-right: 15px;
   }
 }
-
 .svg-sprite {
   position: absolute;
   bottom: 0;
+}
+.layout {
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+  &__overlay {
+    background-color: $blue;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 3;
+    @include ovl;
+    @include ease;
+  }
+  &__grid {
+    position: fixed;
+    max-width: 1140px;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    z-index: 1;
+    opacity: .2;
+    &-item {
+      height: 100%;
+      border-right: 1px solid #553f3f;
+      &:first-child {
+        border-left: 1px solid #553f3f;
+      }
+    }
+  }
 }

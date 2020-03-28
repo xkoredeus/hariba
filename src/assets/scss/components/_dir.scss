@@ -1,0 +1,55 @@
+.dir {
+  &__item {
+    padding: 30px 0;
+  }
+  &__descr {
+    font-family: $f-bold;
+    margin-bottom: 30px;
+    max-width: 570px;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    &-col {
+      flex-basis: 50%;
+    }
+    &-item {
+      font-family: $f-reg;
+      font-size: 14px;
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  &__image {
+    max-width: 400px;
+    &-wrapper {
+      position: relative;
+    }
+  }
+  &__switch-button {
+    padding-right: 0;
+    &::before {
+      display: none;
+    }
+    .button__icon {
+      border: 2px solid $dark;
+      background-color: $tr;
+      margin-right: 0;
+      @include ease-in-out;
+      svg {
+        stroke: $dark;
+      }
+    }
+    &:hover {
+      .button__icon {
+        border-color: $blue;
+        background-color: $blue;
+        svg {
+          stroke: #fff;
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+}

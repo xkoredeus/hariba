@@ -17,7 +17,10 @@
   top: 0;
 }
 @mixin ease {
-  transition: .3s all ease;
+  transition: .4s all ease;
+}
+@mixin ease-in-out {
+  transition: .4s all ease-in-out;
 }
 @mixin r($width) {
   @media only screen and (max-width: $width + "px") {
@@ -28,4 +31,9 @@
   @media only screen and (min-width: $width + "px") {
     @content
   }
+}
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

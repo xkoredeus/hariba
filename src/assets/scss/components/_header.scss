@@ -1,0 +1,109 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 30px 0;
+  background: rgba(146, 147, 159, 0.9);
+  backdrop-filter: blur(20px);
+  z-index: 5;
+  &__logo {
+    @include ease;
+    &-icon {
+      fill: $blue;
+      @include ease-in-out;
+    }
+    &:hover {
+      opacity: .7;
+    }
+  }
+  &__center {
+    @include r(1200) {
+      width: 100%;
+    }
+  }
+  &__nav {
+    &-link {
+      position: relative;
+      font-size: 18px;
+      color: #fff;
+      @include rmin(1200) {
+        &:not(:last-child) {
+          margin-right: 25px;
+        }
+      }
+      @include r(1200) {
+        margin-bottom: 15px;
+      }
+      &::after {
+        position: absolute;
+        content: '';
+        width: 124%;
+        height: 1px;
+        left: 50%;
+        bottom: -3px;
+        transform: translateX(-50%) scale(0);
+        background-color: #fff;
+        @include ease-in-out;
+      }
+      &:hover {
+        color: #fff;
+        text-shadow: 0 0 2px #fff;
+        &::after {
+          transform: translateX(-50%) scale(1);
+        }
+      }
+    }
+  }
+  &__tel {
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    &::after {
+      position: absolute;
+      content: '';
+      width: 124%;
+      height: 1px;
+      left: 50%;
+      bottom: -3px;
+      transform: translateX(-50%) scale(0);
+      background-color: #fff;
+      @include ease-in-out;
+    }
+    &:hover {
+      color: #fff;
+      text-shadow: 0 0 2px #fff;
+      &::after {
+        transform: translateX(-50%) scale(1);
+      }
+    }
+  }
+  &__menu {
+    &-btn {
+      position: relative;
+      width: 36px;
+      height: 32px;
+      border: none;
+      background: none;
+      outline: none;
+      box-shadow: none;
+    }
+    &-hamb,
+    &-cross {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      @include ease-in-out;
+      &:hover {
+        opacity: .8;
+      }
+    }
+    &-hamb {
+      fill: $blue;
+    }
+    &-cross {
+      fill: #fff;
+    }
+  }
+}
