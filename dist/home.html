@@ -114,32 +114,30 @@
     </div>
     <!-- /preloader-->    <section class="hero">
         <header class="header">
-            <div class="container">
-                <div class="header__in d-flex align-items-center justify-content-between flex-wrap flex-xl-nowrap">
-                    <a class="header__logo order-1" href="home.html">
-                        <svg class="header__logo-icon" width="220" height="35">
-                            <use xlink:href="#logo"></use>
-                        </svg>
-                    </a>
-                    <div class="header__center flex-grow-1 d-flex flex-column flex-xl-row justify-content-between align-items-center order-3 order-xl-2">
-                        <nav class="header__nav d-flex flex-column flex-xl-row align-items-center ml-xl-5 order-2 order-xl-1">
-                            <a class="header__nav-link js-link--anchor" href="#about">О компании</a>
-                            <a class="header__nav-link js-link--anchor" href="#dir">Услуги</a>
-                            <a class="header__nav-link" href="news.html">Новости</a>
-                            <a class="header__nav-link js-link--anchor" href="#footer">Контакты</a>
-                        </nav>
-                        <a class="header__tel mr-xl-5 mb-5 mb-xl-0 order-1 order-xl-2" href="tel:84950000000">8 (495) 000-00-00</a>
-                    </div>
-                    <button class="header__menu-btn js-header__menu-btn order-2 order-xl-3">
-                        <svg class="header__menu-hamb" width="36" height="32">
-                            <use xlink:href="#hamburger"></use>
-                        </svg>
-                        <svg class="header__menu-cross" width="27" height="27">
-                            <use xlink:href="#cross">
-                            </use>
-                        </svg>
-                    </button>
+            <div class="header__in d-flex align-items-center justify-content-between flex-wrap flex-xl-nowrap">
+                <a class="header__logo order-1" href="home.html">
+                    <svg class="header__logo-icon" width="188" height="35">
+                        <use xlink:href="#logo"></use>
+                    </svg>
+                </a>
+                <div class="header__center flex-grow-1 d-flex flex-column flex-xl-row justify-content-between align-items-center order-3 order-xl-2">
+                    <nav class="header__nav d-flex flex-column flex-xl-row align-items-center ml-xl-5 order-2 order-xl-1">
+                        <a class="header__nav-link js-link--anchor" href="#about">О компании</a>
+                        <a class="header__nav-link js-link--anchor" href="#dir">Услуги</a>
+                        <a class="header__nav-link" href="news.html">Новости</a>
+                        <a class="header__nav-link js-link--anchor" href="#footer">Контакты</a>
+                    </nav>
+                    <a class="header__tel mr-xl-5 mb-5 mb-xl-0 order-1 order-xl-2" href="tel:84950000000">8 (495) 000-00-00</a>
                 </div>
+                <button class="header__menu-btn js-header__menu-btn order-2 order-xl-3">
+                    <svg class="header__menu-hamb" width="36" height="32">
+                        <use xlink:href="#hamburger"></use>
+                    </svg>
+                    <svg class="header__menu-cross" width="27" height="27">
+                        <use xlink:href="#cross">
+                        </use>
+                    </svg>
+                </button>
             </div>
         </header>        <section class="banner">
             <div class="container">
@@ -160,9 +158,6 @@
     <main class="layout">
         <div class="layout__overlay js-layout__overlay"></div>
         <div class="layout__grid">
-            <div class="layout__grid-item">
-                <div class="layout__grid-item-in"></div>
-            </div>
             <div class="layout__grid-item">
                 <div class="layout__grid-item-in"></div>
             </div>
@@ -273,10 +268,10 @@
                         </div>
                         <div class="dir__navigation row align-items-baseline">
                             <div class="col-xl-4">
-                                <a class="button dir__button js-link--anchor" href="#feed">
+                                <a class="button button--open dir__button js-link--anchor" href="#feed">
                                     <span class="button__icon">
-                                        <svg width="23" height="25">
-                                            <use xlink:href="#string-arrow--right"></use>
+                                        <svg width="10" height="18">
+                                            <use xlink:href="#arrow--right"></use>
                                         </svg>
                                     </span>
                                     <span class="button__text">Оставить заявку</span>
@@ -284,14 +279,14 @@
                             </div>
                             <div class="col-xl-3">
                                 <div class="dir__switch d-none d-xl-block">
-                                    <button class="button dir__switch-button js-dir__switch--prev mr-3" type="button">
+                                    <button class="button dir__switch-button dir__switch-button--prev js-dir__switch-button--prev mr-3" type="button">
                                         <span class="button__icon">
                                             <svg width="10" height="18">
                                                 <use xlink:href="#arrow--left"></use>
                                             </svg>
                                         </span>
                                     </button>
-                                    <button class="button dir__switch-button js-dir__switch--next" type="button">
+                                    <button class="button dir__switch-button dir__switch-button--next js-dir__switch-button--next" type="button">
                                         <span class="button__icon">
                                             <svg width="10" height="18">
                                                 <use xlink:href="#arrow--right"></use>
@@ -360,10 +355,14 @@
                                             <label class="form__checkbox">
                                                 <input class="form__checkbox-input" type="checkbox" required="">
                                                 <span class="form__checkbox-gal">
-                                                    <span class="form__checkbox-gal-square"></span>
-                                                    <svg width="15" height="13">
-                                                        <use xlink:href="#checkbox__gal"></use>
-                                                    </svg>
+                                        <!--            <span class="form__checkbox-gal-square"></span>-->
+                                        <!--            <svg width="15" height="13">-->
+                                        <!--                <use xlink:href="#checkbox__gal"></use>-->
+                                        <!--            </svg>-->
+                                                    <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                                        <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+                                                        <polyline points="1 9 7 14 15 4"></polyline>
+                                                      </svg>
                                                 </span>
                                                 <span class="form__checkbox-text"><span>Нажимая кнопку «Связаться со мной», вы даете</span> <a class="form__checkbox-link" href="#">Согласие на обработку персональных данных</a> <span>на условиях и для целей, определенных</span> <a class="form__checkbox-link" href="#">Политикой конфиденциальности</a></span>
                                             </label>

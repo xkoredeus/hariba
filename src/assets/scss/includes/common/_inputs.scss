@@ -8,7 +8,7 @@ select {
   border-radius: 0;
   background: none;
   border: none;
-  border-bottom: 2px solid $dark;
+  border-bottom: 2px solid $dgr;
   transition: all .4s ease;
 }
 option {
@@ -32,7 +32,7 @@ textarea:focus,
 input:active,
 textarea:active {
   color: $dark;
-  border-bottom-color: $blue;
+  border-bottom-color: $dark;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -109,6 +109,6 @@ input[type="number"] {
 }
 .select2-container--open {
   .select2-selection--single {
-    border-bottom-color: $blue;
+    border-bottom-color: $dark;
   }
 }

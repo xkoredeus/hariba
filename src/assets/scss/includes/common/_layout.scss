@@ -22,7 +22,7 @@
     top: 0;
     transform: translateX(-50%);
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     z-index: 1;
     opacity: .1;
     @include r(1200) {

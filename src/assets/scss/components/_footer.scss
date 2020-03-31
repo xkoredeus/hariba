@@ -45,7 +45,7 @@
       color: #fff;
       border-bottom-color: #fff;
       &:focus {
-        border-bottom-color: $blue;
+        border-bottom-color: #fff;
       }
       &::placeholder {
         color: #fff;
@@ -71,6 +71,10 @@
           margin-right: 0;
           background-color: #fff;
           @include ease-in-out;
+          transform: translateX(0) !important;
+          &::before {
+            display: none;
+          }
         }
       }
       &:hover {

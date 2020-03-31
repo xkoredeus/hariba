@@ -1,7 +1,4 @@
 .form {
-  //&__pol {
-  //  max-width: 490px;
-  //}
   &__checkbox {
     position: relative;
     display: flex;
@@ -19,18 +16,24 @@
       z-index: 1;
       &:checked ~ .form__checkbox-gal {
         svg {
-          opacity: 1;
-          transform: scale(1) rotate(0);
-        }
-        span {
-          opacity: 0;
-          transform: translate(-50%,-50%) rotate(-20deg);
+          stroke: #4285F4;
+
+          path {
+            stroke-dashoffset: 60;
+            transition: all .3s linear;
+          }
+
+          polyline {
+            stroke-dashoffset: 42;
+            transition: all .2s linear;
+            transition-delay: .15s;
+          }
         }
       }
     }
     &-gal {
       position: relative;
-      background: $gr;
+      background-color: $tr;
       border: 3px solid $tr;
       width: 48px;
       min-width: 48px;
@@ -42,25 +45,31 @@
       align-items: center;
       @include ease-in-out;
       svg {
-        opacity: 0;
-        transform: scale(.5) rotate(20deg);
+        position: relative;
+        z-index: 1;
         fill: none;
-        stroke: $blue;
-        @include ease-in-out;
-      }
-      &-square {
-        position: absolute;
-        width: 18px;
-        height: 18px;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        border: 2px solid $blue;
-        border-radius: 3px;
-        @include ease-in-out;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke: #C8CCD4;
+        stroke-width: 1.5;
+        transform: translate3d(0, 0, 0);
+        transition: all .2s ease;
+
+        path {
+          stroke-dasharray: 60;
+          stroke-dashoffset: 0;
+        }
+
+        polyline {
+          stroke-dasharray: 22;
+          stroke-dashoffset: 66;
+        }
       }
       &:hover {
-        border-color: $blue;
+        background-color: $gr;
+        svg {
+          stroke: $blue;
+        }
       }
     }
     &-text {
@@ -70,6 +79,7 @@
     &-link {
       border-bottom: 1px solid $blue;
       &:hover {
+        color: $dark;
         border-color: $dark;
       }
     }

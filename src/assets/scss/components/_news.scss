@@ -31,6 +31,7 @@
       position: relative;
       padding: 30px;
       @include cv;
+      margin-right: 65px;
       &::before {
         @include ovl;
         background-color: $dark;
@@ -56,11 +57,6 @@
       }
       &-descr {
         margin-bottom: 35px;
-      }
-      &:hover {
-        &::before {
-          opacity: .8;
-        }
       }
     }
   }

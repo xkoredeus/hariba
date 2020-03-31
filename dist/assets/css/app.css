@@ -5863,7 +5863,7 @@ select {
   border-radius: 0;
   background: none;
   border: none;
-  border-bottom: 2px solid #22201D;
+  border-bottom: 2px solid #7A7A7A;
   -webkit-transition: all .4s ease;
   transition: all .4s ease;
 }
@@ -5923,7 +5923,7 @@ textarea:focus,
 input:active,
 textarea:active {
   color: #22201D;
-  border-bottom-color: #478CD0;
+  border-bottom-color: #22201D;
 }
 
 input::-webkit-outer-spin-button,
@@ -6022,7 +6022,7 @@ input[type="number"] {
 }
 
 .select2-container--open .select2-selection--single {
-  border-bottom-color: #478CD0;
+  border-bottom-color: #22201D;
 }
 
 .button {
@@ -6078,19 +6078,55 @@ input[type="number"] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: .4s all ease-in-out;
+  transition: .4s all ease-in-out;
 }
 
 @media only screen and (max-width: 1200px) {
   .button__icon {
     margin-right: 0;
+    -webkit-transform: translateX(6px);
+            transform: translateX(6px);
+  }
+}
+
+.button__icon::before {
+  position: absolute;
+  content: '';
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin-left: -5px;
+  width: 20px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 3px;
+  opacity: 0;
+  -webkit-transition: .4s all ease-in-out;
+  transition: .4s all ease-in-out;
+}
+
+@media only screen and (max-width: 1200px) {
+  .button__icon::before {
+    opacity: 1;
+    margin-left: 0;
   }
 }
 
 .button__icon svg {
+  position: relative;
   fill: none;
   stroke: #fff;
   -webkit-transition: .4s all ease-in-out;
   transition: .4s all ease-in-out;
+}
+
+@media only screen and (max-width: 1200px) {
+  .button__icon svg {
+    -webkit-transform: translateX(6px);
+            transform: translateX(6px);
+  }
 }
 
 .button__text {
@@ -6113,9 +6149,19 @@ input[type="number"] {
   width: 100%;
 }
 
+.button:hover .button__icon {
+  -webkit-transform: translateX(6px);
+          transform: translateX(6px);
+}
+
+.button:hover .button__icon::before {
+  opacity: 1;
+  margin-left: 0;
+}
+
 .button:hover .button__icon svg {
-  -webkit-transform: translateX(10px);
-          transform: translateX(10px);
+  -webkit-transform: translateX(6px);
+          transform: translateX(6px);
 }
 
 .button:hover .button__text {
@@ -6124,6 +6170,36 @@ input[type="number"] {
 
 .button--white .button__text {
   color: #fff;
+}
+
+.button--open::before {
+  width: 100%;
+}
+
+.button--open .button__icon {
+  -webkit-transform: translateX(6px);
+          transform: translateX(6px);
+}
+
+.button--open .button__icon::before {
+  opacity: 1;
+  margin-left: 0;
+}
+
+.button--open .button__icon svg {
+  -webkit-transform: translateX(6px);
+          transform: translateX(6px);
+}
+
+.button--open .button__text {
+  color: #fff;
+}
+
+@media only screen and (min-width: 1200px) {
+  .button--open:hover .button__icon {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
 }
 
 .link--decor span {
@@ -6171,20 +6247,26 @@ input[type="number"] {
 }
 
 .form__checkbox-input:checked ~ .form__checkbox-gal svg {
-  opacity: 1;
-  -webkit-transform: scale(1) rotate(0);
-          transform: scale(1) rotate(0);
+  stroke: #4285F4;
 }
 
-.form__checkbox-input:checked ~ .form__checkbox-gal span {
-  opacity: 0;
-  -webkit-transform: translate(-50%, -50%) rotate(-20deg);
-          transform: translate(-50%, -50%) rotate(-20deg);
+.form__checkbox-input:checked ~ .form__checkbox-gal svg path {
+  stroke-dashoffset: 60;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.form__checkbox-input:checked ~ .form__checkbox-gal svg polyline {
+  stroke-dashoffset: 42;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+  -webkit-transition-delay: .15s;
+          transition-delay: .15s;
 }
 
 .form__checkbox-gal {
   position: relative;
-  background: #EBEBEB;
+  background-color: transparent;
   border: 3px solid transparent;
   width: 48px;
   min-width: 48px;
@@ -6205,31 +6287,35 @@ input[type="number"] {
 }
 
 .form__checkbox-gal svg {
-  opacity: 0;
-  -webkit-transform: scale(0.5) rotate(20deg);
-          transform: scale(0.5) rotate(20deg);
+  position: relative;
+  z-index: 1;
   fill: none;
-  stroke: #478CD0;
-  -webkit-transition: .4s all ease-in-out;
-  transition: .4s all ease-in-out;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #C8CCD4;
+  stroke-width: 1.5;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
 }
 
-.form__checkbox-gal-square {
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  border: 2px solid #478CD0;
-  border-radius: 3px;
-  -webkit-transition: .4s all ease-in-out;
-  transition: .4s all ease-in-out;
+.form__checkbox-gal svg path {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 0;
+}
+
+.form__checkbox-gal svg polyline {
+  stroke-dasharray: 22;
+  stroke-dashoffset: 66;
 }
 
 .form__checkbox-gal:hover {
-  border-color: #478CD0;
+  background-color: #EBEBEB;
+}
+
+.form__checkbox-gal:hover svg {
+  stroke: #478CD0;
 }
 
 .form__checkbox-text {
@@ -6242,6 +6328,7 @@ input[type="number"] {
 }
 
 .form__checkbox-link:hover {
+  color: #22201D;
   border-color: #22201D;
 }
 
@@ -6507,7 +6594,7 @@ input[type="number"] {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   z-index: 1;
   opacity: .1;
 }
@@ -6866,7 +6953,7 @@ div.pagination ul.pagination li.control:hover svg {
   left: 0;
   top: 0;
   width: 100%;
-  padding: 30px 0;
+  padding: 30px 36px;
   z-index: 5;
   -webkit-transition: .4s all ease-in-out;
   transition: .4s all ease-in-out;
@@ -6874,7 +6961,7 @@ div.pagination ul.pagination li.control:hover svg {
 
 @media only screen and (max-width: 800px) {
   .header {
-    padding: 15px 0;
+    padding: 15px;
   }
 }
 
@@ -7207,6 +7294,7 @@ div.pagination ul.pagination li.control:hover svg {
 
 .about__video-button svg {
   fill: #fff;
+  margin-left: 8px;
 }
 
 .about__video-button:hover {
@@ -7314,6 +7402,12 @@ div.pagination ul.pagination li.control:hover svg {
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  .dir__list-col:nth-child(2) {
+    padding-left: 15px;
+  }
+}
+
 .dir__list-item {
   font-family: "Formular-Regular";
   font-size: 14px;
@@ -7354,6 +7448,14 @@ div.pagination ul.pagination li.control:hover svg {
   display: none;
 }
 
+.dir__switch-button--prev svg {
+  margin-right: 3px;
+}
+
+.dir__switch-button--next svg {
+  margin-left: 3px;
+}
+
 .dir__switch-button .button__icon {
   border: 2px solid #22201D;
   background-color: transparent;
@@ -7369,6 +7471,12 @@ div.pagination ul.pagination li.control:hover svg {
 .dir__switch-button:hover .button__icon {
   border-color: #478CD0;
   background-color: #478CD0;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.dir__switch-button:hover .button__icon::before {
+  display: none;
 }
 
 .dir__switch-button:hover .button__icon svg {
@@ -7490,6 +7598,7 @@ div.pagination ul.pagination li.control:hover svg {
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
+  margin-right: 65px;
 }
 
 .news__item--wide::before {
@@ -7536,10 +7645,6 @@ div.pagination ul.pagination li.control:hover svg {
 
 .news__item--wide-descr {
   margin-bottom: 35px;
-}
-
-.news__item--wide:hover::before {
-  opacity: .8;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -7623,7 +7728,7 @@ div.pagination ul.pagination li.control:hover svg {
 }
 
 .footer__form input:focus {
-  border-bottom-color: #478CD0;
+  border-bottom-color: #fff;
 }
 
 .footer__form input::-webkit-input-placeholder {
@@ -7667,6 +7772,12 @@ div.pagination ul.pagination li.control:hover svg {
   background-color: #fff;
   -webkit-transition: .4s all ease-in-out;
   transition: .4s all ease-in-out;
+  -webkit-transform: translateX(0) !important;
+          transform: translateX(0) !important;
+}
+
+.footer__form-button .button__icon::before {
+  display: none;
 }
 
 .footer__form-button:hover .button__icon {
