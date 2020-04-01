@@ -6344,12 +6344,13 @@ input[type="number"] {
 }
 
 .form__checkbox-link {
-  border-bottom: 1px solid #478CD0;
+  color: #22201D;
+  border-bottom: 1px solid #22201D;
 }
 
 .form__checkbox-link:hover {
-  color: #22201D;
-  border-color: #22201D;
+  color: #478CD0;
+  border-color: #478CD0;
 }
 
 .section--inner {

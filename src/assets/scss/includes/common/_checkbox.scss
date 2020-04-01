@@ -77,10 +77,11 @@
       font-size: 14px;
     }
     &-link {
-      border-bottom: 1px solid $blue;
+      color: $dark;
+      border-bottom: 1px solid $dark;
       &:hover {
-        color: $dark;
-        border-color: $dark;
+        color: $blue;
+        border-color: $blue;
       }
     }
   }
