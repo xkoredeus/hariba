@@ -6,15 +6,24 @@
   padding: 30px 36px;
   z-index: 5;
   @include ease-in-out;
-  @include r(800) {
-    padding: 15px;
+  @include r(1200) {
+    padding: 15px 0;
+  }
+  @include rmin(1200) {
+    .container {
+      max-width: unset;
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
   &::before {
     @include ovl;
     background: #92939f91;
     backdrop-filter: blur(20px);
-    opacity: 0;
     @include ease-in-out;
+    @include rmin(1200) {
+      opacity: 0;
+    }
   }
   &__in {
     position: relative;

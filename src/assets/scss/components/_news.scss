@@ -1,12 +1,20 @@
 .news {
   &__item {
     display: flex;
+    @include r(800) {
+      flex-wrap: wrap;
+    }
     &-image {
       width: 140px;
       min-width: 140px;
       height: 140px;
       @include cv;
       margin-right: 30px;
+      @include r(800) {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
     }
     &-info {
       display: flex;
