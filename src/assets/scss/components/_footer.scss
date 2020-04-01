@@ -1,5 +1,6 @@
 .footer {
   position: relative;
+  font-size: 14px;
   color: #fff;
   background-color: #92939F;
   padding: 50px 0;
@@ -21,6 +22,11 @@
     color: #fff;
     border-bottom: 1px solid #fff;
   }
+  @include rmin(1200) {
+    &__copy {
+      max-width: 300px;
+    }
+  }
   &__title {
     font-family: $h-hev;
     font-size: 26px;
@@ -38,6 +44,9 @@
   }
   &__form {
     position: relative;
+    @include rmin(1200) {
+      max-width: 310px;
+    }
     @include r(600) {
       max-width: 370px;
     }

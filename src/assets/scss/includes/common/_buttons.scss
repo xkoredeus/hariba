@@ -131,6 +131,32 @@
       }
     }
   }
+  &--prev {
+    .button {
+      &__icon {
+        &::before {
+          margin-left: 7px;
+        }
+        svg {
+          @include r(1200) {
+            transform: translateX(0);
+          }
+        }
+      }
+    }
+    &:hover {
+      .button {
+        &__icon {
+          &::before {
+            margin-left: 0;
+          }
+          svg {
+            transform: translateX(-7px);
+          }
+        }
+      }
+    }
+  }
 }
 
 .link--decor {
