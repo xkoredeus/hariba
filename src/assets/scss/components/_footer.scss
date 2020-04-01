@@ -21,6 +21,10 @@
   &__link {
     color: #fff;
     border-bottom: 1px solid #fff;
+    &:hover {
+      color: #fff;
+      border-bottom-color: $blue;
+    }
   }
   @include rmin(1200) {
     &__copy {
@@ -38,8 +42,13 @@
     }
   }
   &__tel {
+    border-bottom: 1px solid $tr;
     @include r(800) {
       font-size: 28px;
+    }
+    &:hover {
+      color: #fff;
+      border-bottom-color: $blue;
     }
   }
   &__form {
